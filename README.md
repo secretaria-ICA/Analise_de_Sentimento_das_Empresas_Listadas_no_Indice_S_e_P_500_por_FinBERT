@@ -30,10 +30,8 @@ as empresas listada no índice financeiro S&P 500. Os documentos análisados sã
 com comentários da gestão de cada companhia sobre a performance passada e sobre as expectativas do futuro, conhecidos como a seção MD&A do arquivo 10K. 
 Logo existe um documento por ano para cada empresa.
 Portanto compilei os resultados em uma tabela onde cada linha é uma empresa do S&P 500 e que contém uma coluna para o documento por empresa. 
-Utilizei um script de extração de MD&A já publicado e criei algumas modificações
-para executar a extração em escala para todas as empresas do S&P em cada ano. Após este processo, fiz a limpeza de alguns caracteres do documento para torná-lo legível.
-Então tokenizei as frases de cada documento e executei o modelo FinBERT de análise de sentimentos. 
-A coluna sentimentos quando é negativo indica performance ruim, zero é neutro e positivo indica performance boa/excelente.
+Os resultados indicam baixa capacidade de previsibilidade da resposta do mercado aos releases, sendo estes relatórios apresentados com sentimentos mais otimistas do que o mercado em todos os anos analisados. Apenas o ano de 2019 que apresentou relevância estatística na previsibilidade de retornos contra os sentimentos apresentados nos demonstrativos.
+
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
 
 <!-- trocar o texto abaixo pelo resumo do trabalho, em inglês -->
