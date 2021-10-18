@@ -63,7 +63,7 @@ A coluna sentimentos quando é negativo indica performance ruim, zero é neutro 
 
 ### 3. Resultados
 
-A extração obteve resultados satifatórios sendo possivel extrair os releases de todas as empresas. Porém o sentimento não se demonstrouum bom preditor da valorização de mercado em relação a divulgação dos documentos, sendo que apenas no ano de 2019 foi possível ter esse sentimento como preditor estatísticamente significante à 5%. Vimos que exitem fortes indicios autoregressivos visto que exite alta correlação entre os sentimentos passados mais próximos
+A extração obteve resultados satifatórios sendo possivel extrair os releases de todas as empresas. Porém o sentimento não se demonstrouum bom preditor da valorização de mercado em relação a divulgação dos documentos, sendo que apenas no ano de 2019 foi possível ter esse sentimento como preditor estatísticamente significante à 5%. Vimos que exitem fortes indicios autoregressivos visto que exite alta correlação entre os sentimentos passados mais próximos.
 
 ### 4. Conclusões
 
