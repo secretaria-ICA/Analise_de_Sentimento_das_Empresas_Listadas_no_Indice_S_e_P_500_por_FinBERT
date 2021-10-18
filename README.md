@@ -8,8 +8,10 @@
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
-- [Link para o código (parte 1) - Extração de MD&As das Empresas do S&P 500](https://github.com/paulolaque/sp500-mda-finbert-sentiment/blob/main/MD%26A.ipynb). <!-- caso não aplicável, remover esta linha -->
-- [Link para o código (parte 2) - Limpeza e Análise de Sentimentos](https://github.com/paulolaque/sp500-mda-finbert-sentiment). <!-- caso não aplicável, remover esta linha -->
+- [Link para o código (parte 1) - Extração de MD&As das Empresas do S&P 500](https://github.com/paulolaque/sp500-mda-finbert-sentiment/blob/main/MD%26A.ipynb). <!-- caso não aplicável, remover esta linha --> 
+ Carregar no notebook o arquivo edgar_v3.py e sp500.csv
+- [Link para o código (parte 2) - Limpeza e Análise de Sentimentos](https://github.com/paulolaque/sp500-mda-finbert-sentiment/blob/main/Limpeza%20e%20%20An%C3%A1lise%20FinBERT.ipynb). <!-- caso não aplicável, remover esta linha --> 
+- [Link para o código (parte 3) - Análise dos Resultados](https://github.com/paulolaque/sp500-mda-finbert-sentiment/blob/main/Regress%C3%A3o_Sentimento.ipynb). <!-- caso não aplicável, remover esta linha --> Carregar com o graphs.py
 
 
 - Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
@@ -48,27 +50,26 @@ The sentiment column when negative indicates poor performance, zero is neutral a
 
 ### 1. Introdução
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
+O objetivo deste trabalho é criar uma forma automatizada de análisar em escala o sentimento dos resultados apresentados pelas empresas listadas no índice financeiro S&P 500. Os documentos análisados são aqueles enviados à SEC (autoridade de valores mobiliários americana) anualmente
+com comentários da gestão de cada companhia sobre a performance passada e sobre as expectativas do futuro, conhecidos como a seção MD&A do arquivo 10K. 
 
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
 
 ### 2. Modelagem
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
-
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+Foram extraidos os textos das demonstrações financeiras de todas as empresas listadas no índice financeiro entre os anos 2015-2019. Totalizando aproximadamente 2500 documentos.
+Compilei os resultados em uma tabela onde cada linha é uma empresa do S&P 500 e que contém uma coluna para o documento por empresa. 
+Utilizei um script de extração de MD&A já publicado e criei algumas modificações
+para executar a extração em escala para todas as empresas do S&P em cada ano. Após este processo, fiz a limpeza de alguns caracteres do documento para torná-lo legível.
+Então tokenizei as frases de cada documento e executei o modelo FinBERT de análise de sentimentos para cada frase, computando no final, a média de sentimentos descontados frases cujo sentimento foi nulo por empresae por ano, sendo a coluna sentimentos.
+A coluna sentimentos quando é negativo indica performance ruim, zero é neutro e positivo indica performance boa/excelente.
 
 ### 3. Resultados
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
-
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+A extração obteve resultados satifatórios sendo possivel extrair os releases de todas as empresas. Porém o sentimento não se demonstrouum bom preditor da valorização de mercado em relação a divulgação dos documentos, sendo que apenas no ano de 2019 foi possível ter esse sentimento como preditor estatísticamente significante à 5%. Vimos que exitem fortes indicios autoregressivos visto que exite alta correlação entre os sentimentos passados mais próximos
 
 ### 4. Conclusões
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin pulvinar nisl vestibulum tortor fringilla, eget imperdiet neque condimentum. Proin vitae augue in nulla vehicula porttitor sit amet quis sapien. Nam rutrum mollis ligula, et semper justo maximus accumsan. Integer scelerisque egestas arcu, ac laoreet odio aliquet at. Sed sed bibendum dolor. Vestibulum commodo sodales erat, ut placerat nulla vulputate eu. In hac habitasse platea dictumst. Cras interdum bibendum sapien a vehicula.
-
-Proin feugiat nulla sem. Phasellus consequat tellus a ex aliquet, quis convallis turpis blandit. Quisque auctor condimentum justo vitae pulvinar. Donec in dictum purus. Vivamus vitae aliquam ligula, at suscipit ipsum. Quisque in dolor auctor tortor facilisis maximus. Donec dapibus leo sed tincidunt aliquam.
+Sugiro para próximos estudos a criação de métodos de distinção entre palavras que se referem ao passado e ao futuro para distinguir comentários de resultados realizados contra previsões (guidance) da gestão da companhia. Outra possível melhoria se daria pela retirada de disclosures de riscos, pois estes mostram cenários possíveis mas que não necessáriamente foram realizados, portanto punindo empresas de setores com exigências legais altas nos disclosures. Próximos estudos também podem explorar mais exautivamente o componente autoregressivo dos sentimentos das demonstrações financeiras.
 
 ---
 
