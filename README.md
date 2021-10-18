@@ -29,7 +29,7 @@ O objetivo deste trabalho é criar uma forma automatizada de análisar em escala
 as empresas listada no índice financeiro S&P 500. Os documentos análisados são aqueles enviados à SEC (autoridade de valores mobiliários americana) anualmente
 com comentários da gestão de cada companhia sobre a performance passada e sobre as expectativas do futuro, conhecidos como a seção MD&A do arquivo 10K. 
 Compilei os resultados em uma tabela onde cada linha é uma empresa do S&P 500 e que contém uma coluna para o documento por empresa. 
-Após executei o modelo FinBERT para análise de sentimentos de cada documento.
+Os documentos foram analisádos pelo modelo FinBERT afim de se obter as notas de sentimentos.
 Os resultados indicam baixa capacidade de previsibilidade da resposta do mercado aos releases, sendo estes relatórios apresentados com sentimentos mais otimistas do que o mercado em todos os anos analisados. Apenas o ano de 2019 que apresentou relevância estatística na previsibilidade de retornos contra os sentimentos apresentados nos demonstrativos.
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
@@ -40,6 +40,7 @@ The objective of this work is to create an automated way to analyze in scale the
 companies listed on the S&P 500 financial index. The documents analyzed are those submitted to the SEC (US Securities Authority) annually
 with comments from each company's management on past performance and expectations for the future, known as the MD&A section of the 10K file.
 I compiled the results into a table where each row is an S&P 500 company and which contains a column for the document per company.
+Those documents were analysed under FinBERT model in order to return a sentiment score.
 The results indicate low predictability of the market's response to releases, and these reports are presented with more optimistic feelings than the market in all the years analyzed. Only the year 2019 showed statistical relevance in predicting returns against the sentiments presented in the statements.
 
 ### 1. Introdução
