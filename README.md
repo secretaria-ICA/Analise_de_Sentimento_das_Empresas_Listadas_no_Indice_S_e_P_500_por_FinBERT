@@ -29,6 +29,7 @@ O objetivo deste trabalho é criar uma forma automatizada de análisar em escala
 as empresas listada no índice financeiro S&P 500. Os documentos análisados são aqueles enviados à SEC (autoridade de valores mobiliários americana) anualmente
 com comentários da gestão de cada companhia sobre a performance passada e sobre as expectativas do futuro, conhecidos como a seção MD&A do arquivo 10K. 
 Compilei os resultados em uma tabela onde cada linha é uma empresa do S&P 500 e que contém uma coluna para o documento por empresa. 
+Após executei o modelo FinBERT para análise de sentimentos de cada documento.
 Os resultados indicam baixa capacidade de previsibilidade da resposta do mercado aos releases, sendo estes relatórios apresentados com sentimentos mais otimistas do que o mercado em todos os anos analisados. Apenas o ano de 2019 que apresentou relevância estatística na previsibilidade de retornos contra os sentimentos apresentados nos demonstrativos.
 
 ### Abstract <!-- Opcional! Caso não aplicável, remover esta seção -->
