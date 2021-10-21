@@ -12,6 +12,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
  Carregar no notebook o arquivo edgar_v3.py e sp500.csv
 - [Link para o código (parte 2) - Limpeza e Análise de Sentimentos](https://github.com/paulolaque/sp500-mda-finbert-sentiment/blob/main/Limpeza%20e%20%20An%C3%A1lise%20FinBERT.ipynb). <!-- caso não aplicável, remover esta linha --> 
 - [Link para o código (parte 3) - Análise dos Resultados](https://github.com/paulolaque/sp500-mda-finbert-sentiment/blob/main/Regress%C3%A3o_Sentimento.ipynb). <!-- caso não aplicável, remover esta linha --> Carregar com o graphs.py
+- [Link para o resultado](https://github.com/paulolaque/sp500-mda-finbert-sentiment/blob/main/Regress%C3%A3o_Sentimento.ipynb)
 
 
 - Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
