@@ -18,7 +18,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 - Trabalhos relacionados: <!-- caso não aplicável, remover estas linhas -->
     - [MD&A Extractor](https://github.com/tzuhsial/edgar-10k-mda).
     - [Github FinBERT](https://github.com/yya518/FinBERT).
-    - [Paper FinBERT](https://arxiv.org/abs/1908.10063)
+    - [Paper FinBERT](https://arxiv.org/abs/2006.08097v2)
     
 
 ---
