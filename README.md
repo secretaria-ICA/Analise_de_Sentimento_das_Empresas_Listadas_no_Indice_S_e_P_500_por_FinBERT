@@ -1,6 +1,6 @@
 <!-- antes de enviar a versão final, solicitamos que todos os comentários, colocados para orientação ao aluno, sejam removidos do arquivo -->
 
-# Análise de Sentimento das Empresas Listadas no Índice S&P 500 por FinBERT
+# Análise_de_Sentimento_das_Empresas_Listadas_no_Índice_S&P_500_por_FinBERT
 
 #### Aluno: [Paulo Gabriel Dantas Laque](https://github.com/paulolaque).
 #### Orientador: [Felipe Borges Coelho](https://github.com/FelipeBorgesC).
